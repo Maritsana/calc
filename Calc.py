@@ -1,12 +1,19 @@
-# Женская формула: 10 х вес + 6,25 х рост – 5 х возраст – 161;
-# Мужская формула: 10 х вес + 6,25 х рост – 5 х года + 5.
-# Формула по Харрису-Бенедикту:
-# Женская формула: 655,1 + 9,563 х вес + 1,85 х рост — 4,676 х возраст;
-# Мужская формула: 66,5 + 13,75 х вес + 5,003 х рост – 6,775 х возраст
-
 print("Здравствуйте!")
-weight = float(input("Ваш вес: "))
-height = float(input("Ваш рост: "))
-age = int(input("Ваш возраст: "))
-calories = (10*weight+6.25*height-5*age-161)
-print('Вам нужно потреблять', int(calories), 'калорий!')
+print("Укажите Ваш пол:")
+gender = input()
+man = ['М', 'м', 'Муж', 'муж', 'Мужской', 'мужской', 'Мужчина', 'мужчина', 'M', 'm', 'Man', 'man', 'Male', 'male']
+woman = ['Ж', 'ж', 'Жен', 'жен', 'Женский', 'женский', 'Женщина', 'женщина', 'W', 'w', 'Woman', 'woman', 'Female', 'female', 'Wife', 'wife', 'Feminine', 'feminine']
+if gender in man:
+    weight = float(input("Ваш вес: "))
+    height = float(input("Ваш рост: "))
+    age = int(input("Ваш возраст: "))
+    calories = (10*weight+6.25*height-5*age+5)
+    print('Вам нужно потреблять', int(calories), 'калорий!')
+elif gender in woman:
+    weight = float(input("Ваш вес: "))
+    height = float(input("Ваш рост: "))
+    age = int(input("Ваш возраст: "))
+    calories = (10*weight+6.25*height-5*age-161)
+    print('Вам нужно потреблять', int(calories), 'калорий!')
+else:
+    print('Введите корректные данные!')
